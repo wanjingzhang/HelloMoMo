@@ -37,6 +37,22 @@ yo code
 2. `vscode.window.showInformationMessage(Hello VS Code from HelloMoMo!)`
 3. Ctrl+Shift+P `reload`reload window, F5运行打开新的窗口，Ctrl+Shift+P, 输入HelloWord命令
 
-###### 修改命令
+###### 修改命令需要三步
 
-1.
+1. `Activation Events` 注册onCommand激活事件，在用户运行命令是扩展被激活。
+2. `Contribution Points` 使用构建点，使其在命令面板中可用，绑定命令ID。扩展VS代码，在Package.json扩展清单
+3. `VS Code API` 使用命令注册绑定VSCode API，在代码扩展中调用的API。
+
+###### 文件扩展结构
+
+```
+├── .vscode
+│ ├── launch.json   // 启动和调试扩展的配置
+│ └──tasks.json     // 编译 TypeScript 的构建任务配置
+├── .gitignore      // 忽略构建输出和node_modules
+├── README.md       // 扩展功能的可读描述
+├── 来源
+│ └── extension.ts  // 扩展源代码
+├── package.json    // 扩展清单
+├── tsconfig.json   // TypeScript 配置
+```
