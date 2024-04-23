@@ -1,7 +1,7 @@
 {
   "name": "hellomomo",
   "displayName": "HelloMoMo",
-  "description": "",
+  "description": "hellomomo",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.88.0"
