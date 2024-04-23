@@ -17,7 +17,7 @@ yo code
 ? What's the description of your extension? Fill Blank
 ? Initialize a git repository? Yes
 ? Bundle the source code with webpack? No
-? Which package manager to use? npm
+? Which package manager to use? npm 1
 ```
 
 ###### 初始化结束运行项目
