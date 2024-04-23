@@ -56,3 +56,34 @@ yo code
 ├── package.json    // 扩展清单
 ├── tsconfig.json   // TypeScript 配置
 ```
+
+###### structuredClone 未定义
+`const structuredClone = (val) => JSON.parse(JSON.stringify(val))`
+`npm run test // 运行成功`
+```
+Found existing install in C:\Users\CelineZ\OneDrive - M. Moser Associates Limited\Desktop\Work\KC\_CODE\Extensions\HelloMoMo\.vscode-test\vscode-win32-x64-archive-1.88.1. Skippi
+
+[main 2024-04-23T08:23:32.034Z] update#setState disabled
+[main 2024-04-23T08:23:32.037Z] update#ctor - updates are disabled by the environment
+Loading development extension at c:\Users\CelineZ\OneDrive - M. Moser Associates Limited\Desktop\Work\KC\_CODE\Extensions\HelloMoMo
+Started local extension host with pid 2252.
+
+  Extension Test Suite
+    ✔ Sample test
+  1 passing (104ms)
+[main 2024-04-23T08:23:36.139Z] Extension host with pid 2252 exited with code: 0, signal: unknown.
+Exit code:   0
+Done
+```
+
+
+###### 禁用其它的扩展插件
+`--disable-extensions`
+
+###### vsce 发布工具 将Extension发布出来
+`npm install -g vsce`
+
+
+
+
+
