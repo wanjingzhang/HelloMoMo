@@ -82,3 +82,36 @@ Done
 
 ###### vsce 发布工具 将Extension发布出来
 `npm install -g vsce`
+`vsce publish`
+1. WARNING  A 'repository' field is missing from the 'package.json' manifest file.
+``` 
+ // 添加repository字段在package.json.
+ "repository": {
+    "type": "git",
+    "url": "https://github.com/wanjingzhang/HelloMoMo.git"
+  } 
+
+```
+2. WARNING  LICENSE.md, LICENSE.txt or LICENSE not found
+```
+// 新建LICENSE文件
+Visual Studio Code MoMo Packs
+
+Copyright (c) Microsoft Corporation
+
+All rights reserved.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
+```
+
+3. ERROR  Missing publisher name. Learn more: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions
+```
+ // 设置publisher
+```
+
