@@ -39,9 +39,9 @@ yo code
 
 ###### 修改命令需要三步
 
-1. `Activation Events` 注册onCommand激活事件，在用户运行命令是扩展被激活。
-2. `Contribution Points` 使用构建点，使其在命令面板中可用，绑定命令ID。扩展VS代码，在Package.json扩展清单
-3. `VS Code API` 使用命令注册绑定VSCode API，在代码扩展中调用的API。
+1. `Activation Events` 注册onCommand激活事件，在用户运行命令是扩展被激活。 `onCommand:extension.helloWorld`
+2. `Contribution Points` 使用构建点，使其在命令面板中可用，绑定命令ID。扩展VS代码，在Package.json扩展清单 `extension.helloWorld`
+3. `VS Code API` 使用命令注册绑定VSCode API，在代码扩展中调用的API。`commands.registerCommand`
 
 ###### 文件扩展结构
 
@@ -55,11 +55,20 @@ yo code
 │ └── extension.ts  // 扩展源代码
 ├── package.json    // 扩展清单
 ├── tsconfig.json   // TypeScript 配置
+
+package.json
+engines:vscode 支持最低的vscode版本 
+activationEvents 支持激活的事件
+main 文件的入口
+contributes 命令最重要
+
 ```
 
 ###### structuredClone 未定义
+
 `const structuredClone = (val) => JSON.parse(JSON.stringify(val))`
 `npm run test // 运行成功`
+
 ```
 Found existing install in C:\Users\CelineZ\OneDrive - M. Moser Associates Limited\Desktop\Work\KC\_CODE\Extensions\HelloMoMo\.vscode-test\vscode-win32-x64-archive-1.88.1. Skippi
 
@@ -76,15 +85,18 @@ Exit code:   0
 Done
 ```
 
-
 ###### 禁用其它的扩展插件
+
 `--disable-extensions`
 
 ###### vsce 发布工具 将Extension发布出来
+
 `npm install -g vsce`
 `vsce publish`
+
 1. WARNING  A 'repository' field is missing from the 'package.json' manifest file.
-``` 
+
+```
  // 添加repository字段在package.json.
  "repository": {
     "type": "git",
@@ -92,7 +104,9 @@ Done
   } 
 
 ```
+
 2. WARNING  LICENSE.md, LICENSE.txt or LICENSE not found
+
 ```
 // 新建LICENSE文件
 Visual Studio Code MoMo Packs
@@ -110,8 +124,13 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 ```
 
-3. ERROR  Missing publisher name. Learn more: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions
+3. ERROR  Missing publisher name. Learn more: <https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions>
+    1. 需要Azure DevOps组织
+    2. 创建Publisher
+    3. 登录Publisher
+    4. 发布
+
 ```
  // 设置publisher
-```
 
+```

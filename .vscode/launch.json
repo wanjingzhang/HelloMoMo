@@ -5,16 +5,18 @@
 {
 	"version": "0.2.0",
 	"configurations": [
+
 		{
-			"name": "Run Extension",
+			"name": "Extension Tests",
 			"type": "extensionHost",
 			"request": "launch",
+			"runtimeExecutable": "${execPath}",
 			"args": [
 				"--disable-extensions",
-				"--extensionDevelopmentPath=${workspaceFolder}", 
+				"--extensionDevelopmentPath=${workspaceFolder}",  
 			],
 			"outFiles": [
-				"${workspaceFolder}/out/**/*.js"
+				"${workspaceFolder}/out/test/**/*.js"
 			],
 			"preLaunchTask": "${defaultBuildTask}"
 		}

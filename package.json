@@ -1,10 +1,13 @@
 {
   "name": "hellomomo",
   "displayName": "HelloMoMo",
-  "description": "hellomomo",
+  "description": "A tools for remember fixed collocation.",
   "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "publisher": "celinezhang",
   "engines": {
-    "vscode": "^1.88.0"
+    "vscode": "^1.81.0"
   },
   "categories": [
     "Other"
@@ -14,8 +17,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "hellomomo.helloWorld",
-        "title": "Hello World"
+        "command": "hellomomo.start",
+        "title": "HelloMoMo Start"
       }
     ]
   },
@@ -28,19 +31,21 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.88.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
     "eslint": "^8.57.0",
     "typescript": "^5.3.3",
-    "@vscode/test-cli": "^0.0.8",
-    "@vscode/test-electron": "^2.3.9"
+    "vscode": "^1.1.37"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wanjingzhang/HelloMoMo.git"
-  }
-
+    "url": "https://github.com/wanjingzhang/HelloMoMo"
+  },
+  "bugs": {
+		"url": "https://github.com/wanjingzhang/HelloMoMo/issues"
+	}
 }
