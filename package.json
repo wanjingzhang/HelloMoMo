@@ -19,8 +19,41 @@
       {
         "command": "hellomomo.start",
         "title": "HelloMoMo Start"
+      },
+      {
+        "command": "hellomomo.prevSentence",
+        "title": "HelloMoMo Previous!"
+      },
+      {
+        "command": "hellomomo.nextSentence",
+        "title": "HelloMoMo Next!"
       }
-    ]
+    ],
+    "keybindings": [
+      {
+        "command": "hellomomo.start",
+        "title":"Hello HelloMoMo",
+        "key": "shift+alt+1",
+        "mac": "ctrl+shift+q1",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "qwerty-learner.toggleChapterCycleMode",
+        "key": "shift+alt+c",
+        "mac": "ctrl+shift+c",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Hello MoMo",
+      "properties": {
+        "hellomomo.keySound": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否开启键盘音"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
