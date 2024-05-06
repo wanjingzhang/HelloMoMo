@@ -27,27 +27,37 @@
       {
         "command": "hellomomo.nextSentence",
         "title": "HelloMoMo Next!"
+      },
+      {
+        "command":"hellomomo.changelanguage",
+        "title": "HelloMoMo Switch Language!"
       }
     ],
     "keybindings": [
       {
         "command": "hellomomo.start",
         "title":"Hello HelloMoMo",
-        "key": "shift+alt+1",
-        "mac": "ctrl+shift+1",
-        "when": "editorTextFocus"
+        "key": "ctrl+shift+space",
+        "mac": "ctrl+shift+space",
+        "when": "editorTextFocus || terminalFocus"
       },
       {
         "command": "hellomomo.prevSentence",
-        "key": "shift+alt+2",
-        "mac": "ctrl+shift+2",
-        "when": "editorTextFocus"
+        "key": "ctrl+shift+left",
+        "mac": "ctrl+shift+left",
+        "when": "editorTextFocus || terminalFocus"
       },
       {
         "command": "hellomomo.nextSentence",
-        "key": "shift+alt+3",
-        "mac": "ctrl+shift+3",
-        "when": "editorTextFocus"
+        "key": "ctrl+shift+right",
+        "mac": "ctrl+shift+right",
+        "when": "editorTextFocus || terminalFocus"
+      },
+      {
+        "command": "hellomomo.changelanguage",
+        "key": "ctrl+shift+up",
+        "mac": "ctrl+shift+up",
+        "when": "editorTextFocus || terminalFocus"
       }
     ],
     "configuration": {

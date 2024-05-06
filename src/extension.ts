@@ -53,7 +53,7 @@ export function activate(context: vscode.ExtensionContext) {
           SentenceBar.hide();
         }
         // The code you place here will be executed every time your command is executed
-        vscode.window.showInformationMessage(`Hello Momo, Keep going!`);
+        vscode.window.showInformationMessage(`Keep going!`);
       }),
       vscode.commands.registerCommand(PREV_WORD_COMMAND, () => {
         player.prevWord();
