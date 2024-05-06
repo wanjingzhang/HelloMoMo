@@ -97,6 +97,7 @@ Done
 1. WARNING  A 'repository' field is missing from the 'package.json' manifest file.
 
 ```
+
  // 添加repository字段在package.json.
  "repository": {
     "type": "git",
@@ -134,3 +135,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  // 设置publisher
 
 ```
+
+###### vsce 发布工具 打包
+`vsce package`
