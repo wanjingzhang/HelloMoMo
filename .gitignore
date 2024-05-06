@@ -4,5 +4,5 @@ node_modules
 .vscode-test/
 *.vsix
 
-utils/data.ts
-*/data.ts 
+src/utils/data.ts
+data.ts 
