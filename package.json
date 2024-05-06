@@ -34,13 +34,19 @@
         "command": "hellomomo.start",
         "title":"Hello HelloMoMo",
         "key": "shift+alt+1",
-        "mac": "ctrl+shift+q1",
+        "mac": "ctrl+shift+1",
         "when": "editorTextFocus"
       },
       {
-        "command": "qwerty-learner.toggleChapterCycleMode",
-        "key": "shift+alt+c",
-        "mac": "ctrl+shift+c",
+        "command": "hellomomo.prevSentence",
+        "key": "shift+alt+2",
+        "mac": "ctrl+shift+2",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "hellomomo.nextSentence",
+        "key": "shift+alt+3",
+        "mac": "ctrl+shift+3",
         "when": "editorTextFocus"
       }
     ],
