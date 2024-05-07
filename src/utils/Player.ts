@@ -25,6 +25,10 @@ export default class Player{
         return this.currentSentence[this.language]
     }
 
+    getCurrentId(){
+        return this.currentId.toString();
+    }
+
     prevWord() {
         if (this.currentId >= 1) { 
             this.currentId -= 1;

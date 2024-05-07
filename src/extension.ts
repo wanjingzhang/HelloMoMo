@@ -15,6 +15,10 @@ export function activate(context: vscode.ExtensionContext) {
   const player = new Player(context);
   // Use the console to output diagnostic information (console.log) and errors (console.error)
   // This line of code will only be executed once when your extension is activated
+  const IdBar = vscode.window.createStatusBarItem(
+    vscode.StatusBarAlignment.Left,
+    -102
+  )
   const SentenceBar = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
     -103
@@ -27,6 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.StatusBarAlignment.Left,
     -105
   );
+  IdBar.text = "";
   prevBtn.text = "<";
   prevBtn.tooltip = "Previous Sentence";
   prevBtn.command = PREV_WORD_COMMAND;
@@ -44,10 +49,12 @@ export function activate(context: vscode.ExtensionContext) {
         player.isStart = !player.isStart;
         if (player.isStart) {
           initializeBar();
+          IdBar.show();
           prevBtn.show();
           nextBtn.show();
           SentenceBar.show();
         } else {
+          IdBar.hide();
           prevBtn.hide();
           nextBtn.hide();
           SentenceBar.hide();
@@ -72,6 +79,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   function setUpSentenceBar() {
     SentenceBar.text = player.getInitialWordBarContent();
+    IdBar.text = player.getCurrentId();
   }
 
   function initializeBar() {
