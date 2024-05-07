@@ -5,7 +5,8 @@ import Player from "./utils/Player";
 
 let myStatusBarItem: vscode.StatusBarItem;
 const START_COMMAND = "hellomomo.start";
-const CHANG_LANGUAGE_COMMAND = "hellomomo.changelanguage";
+const CHANG_LANGUAGE_COMMAND = "hellomomo.changelanguage"; 
+const CHANG_LANGUAGE_COMMAND2 = "hellomomo.changelanguage2"; 
 const PREV_WORD_COMMAND = "hellomomo.prevSentence";
 const NEXT_WORD_COMMAND = "hellomomo.nextSentence";
 
@@ -39,6 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
   nextBtn.tooltip = "Next Sentence";
   nextBtn.command = NEXT_WORD_COMMAND;
   SentenceBar.command = CHANG_LANGUAGE_COMMAND;
+  SentenceBar.command = CHANG_LANGUAGE_COMMAND2;
 
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
@@ -71,6 +73,10 @@ export function activate(context: vscode.ExtensionContext) {
         initializeBar();
       }),
       vscode.commands.registerCommand(CHANG_LANGUAGE_COMMAND, () => {
+        player.changelanguage();
+        initializeBar();
+      }),
+      vscode.commands.registerCommand(CHANG_LANGUAGE_COMMAND2, () => {
         player.changelanguage();
         initializeBar();
       }),
