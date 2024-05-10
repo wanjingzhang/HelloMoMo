@@ -85,7 +85,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   function setUpSentenceBar() {
     SentenceBar.text = player.getInitialWordBarContent();
-    IdBar.text = player.getCurrentId();
+    IdBar.text = `${(player.getCurrentId()/player.total()*100).toFixed(2)}%`;
   }
 
   function initializeBar() {

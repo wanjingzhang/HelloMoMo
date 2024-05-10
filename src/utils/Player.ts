@@ -21,12 +21,16 @@ export default class Player{
         return datasource[this.currentId]
     } 
 
+    total(){
+        return datasource.length;
+    }
+
     getInitialWordBarContent() { 
         return this.currentSentence[this.language]
     }
 
     getCurrentId(){
-        return this.currentId.toString();
+        return this.currentId;
     }
 
     prevWord() {
