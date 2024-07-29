@@ -36,6 +36,11 @@
         "command":"hellomomo.changelanguage2",
         "title": "HelloMoMo Switch Language2!"
       }
+      ,
+      {
+        "command":"hellomomo.play",
+        "title": "HelloMoMo Auto Play!"
+      }
     ],
     "keybindings": [
       {
@@ -67,6 +72,12 @@
         "command": "hellomomo.changelanguage2",
         "key": "ctrl+shift+down",
         "mac": "ctrl+shift+down",
+        "when": "editorTextFocus || terminalFocus"
+      },
+      {
+        "command": "hellomomo.play",
+        "key": "ctrl+shift+H",
+        "mac": "ctrl+shift+H",
         "when": "editorTextFocus || terminalFocus"
       }
     ],

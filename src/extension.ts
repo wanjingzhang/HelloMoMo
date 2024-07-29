@@ -5,8 +5,9 @@ import Player from "./utils/Player";
 
 let myStatusBarItem: vscode.StatusBarItem;
 const START_COMMAND = "hellomomo.start";
-const CHANG_LANGUAGE_COMMAND = "hellomomo.changelanguage"; 
-const CHANG_LANGUAGE_COMMAND2 = "hellomomo.changelanguage2"; 
+const PLAY_COMMAND = "hellomomo.play";
+const CHANG_LANGUAGE_COMMAND = "hellomomo.changelanguage";
+const CHANG_LANGUAGE_COMMAND2 = "hellomomo.changelanguage2";
 const PREV_WORD_COMMAND = "hellomomo.prevSentence";
 const NEXT_WORD_COMMAND = "hellomomo.nextSentence";
 
@@ -19,19 +20,24 @@ export function activate(context: vscode.ExtensionContext) {
   const IdBar = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
     -102
-  )
-  const SentenceBar = vscode.window.createStatusBarItem(
-    vscode.StatusBarAlignment.Left,
-    -103
   );
   const prevBtn = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
-    -104
+    -103
   );
   const nextBtn = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
+    -104
+  );
+  const PlayBar = vscode.window.createStatusBarItem(
+    vscode.StatusBarAlignment.Left,
     -105
   );
+  const SentenceBar = vscode.window.createStatusBarItem(
+    vscode.StatusBarAlignment.Left,
+    -106
+  );
+
   IdBar.text = "";
   prevBtn.text = "<";
   prevBtn.tooltip = "Previous Sentence";
@@ -41,6 +47,8 @@ export function activate(context: vscode.ExtensionContext) {
   nextBtn.command = NEXT_WORD_COMMAND;
   SentenceBar.command = CHANG_LANGUAGE_COMMAND;
   SentenceBar.command = CHANG_LANGUAGE_COMMAND2;
+  PlayBar.text = "▶";
+  PlayBar.command = PLAY_COMMAND;
 
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
@@ -55,11 +63,16 @@ export function activate(context: vscode.ExtensionContext) {
           prevBtn.show();
           nextBtn.show();
           SentenceBar.show();
+          PlayBar.show();
         } else {
           IdBar.hide();
           prevBtn.hide();
           nextBtn.hide();
           SentenceBar.hide();
+          PlayBar.hide();
+
+          player.isPlaying = false;
+          player.timer !== null ? clearInterval(player.timer) : 0;
         }
         // The code you place here will be executed every time your command is executed
         vscode.window.showInformationMessage(`Keep going!`);
@@ -71,6 +84,27 @@ export function activate(context: vscode.ExtensionContext) {
       vscode.commands.registerCommand(NEXT_WORD_COMMAND, () => {
         player.nextWord();
         initializeBar();
+      }),
+      vscode.commands.registerCommand(PLAY_COMMAND, () => {
+        player.isPlaying = player.isPlaying ? false : true;
+        if (player.isPlaying) {
+          initializeBar();
+          let count = 0;
+          player.timer = setInterval(() => {
+            if (count == 0) {
+              player.changelanguage();
+              count++;
+            } else if (count == 1) {
+              player.changelanguage();
+              player.nextWord();
+              count = 0;
+            }
+            initializeBar();
+          }, 9000);
+        } else {
+          player.timer !== null ? clearInterval(player.timer) : 0;
+          initializeBar();
+        }
       }),
       vscode.commands.registerCommand(CHANG_LANGUAGE_COMMAND, () => {
         player.changelanguage();
@@ -85,7 +119,11 @@ export function activate(context: vscode.ExtensionContext) {
 
   function setUpSentenceBar() {
     SentenceBar.text = player.getInitialWordBarContent();
-    IdBar.text = `${(player.getCurrentId()/player.total()*100).toFixed(2)}%`;
+    PlayBar.text = player.isPlaying ? "||" : "▶";
+    IdBar.text = `${player.getCurrentId()}`;
+    // IdBar.text = `${((player.getCurrentId() / player.total()) * 100).toFixed(
+    //   2
+    // )}%`;
   }
 
   function initializeBar() {
