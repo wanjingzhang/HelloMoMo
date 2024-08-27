@@ -82,7 +82,8 @@ Started local extension host with pid 2252.
   1 passing (104ms)
 [main 2024-04-23T08:23:36.139Z] Extension host with pid 2252 exited with code: 0, signal: unknown.
 Exit code:   0
-Done
+Done 
+
 ```
 
 ###### 禁用其它的扩展插件
@@ -132,9 +133,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     4. 发布
 
 ```
- // 设置publisher
+ // 设置publisher   
 
 ```
 
 ###### vsce 发布工具 打包
+
 `vsce package`

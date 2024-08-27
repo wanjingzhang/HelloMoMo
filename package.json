@@ -35,11 +35,14 @@
       {
         "command":"hellomomo.changelanguage2",
         "title": "HelloMoMo Switch Language2!"
-      }
-      ,
+      },
       {
         "command":"hellomomo.play",
         "title": "HelloMoMo Auto Play!"
+      },
+      {
+        "command":"hellomomo.only",
+        "title": "HelloMoMo 1 Play!"
       }
     ],
     "keybindings": [
@@ -63,6 +66,12 @@
         "when": "editorTextFocus || terminalFocus"
       },
       {
+        "command": "hellomomo.changeChapter",
+        "key": "ctrl+shift+9",
+        "mac": "ctrl+shift+9",
+        "when": "editorTextFocus || terminalFocus"
+      },
+      {
         "command": "hellomomo.changelanguage",
         "key": "ctrl+shift+up",
         "mac": "ctrl+shift+up",
@@ -76,8 +85,14 @@
       },
       {
         "command": "hellomomo.play",
-        "key": "ctrl+shift+H",
-        "mac": "ctrl+shift+H",
+        "key": "ctrl+shift+P",
+        "mac": "ctrl+shift+P",
+        "when": "editorTextFocus || terminalFocus"
+      },
+      {
+        "command": "hellomomo.only",
+        "key": "ctrl+shift+1",
+        "mac": "ctrl+shift+1",
         "when": "editorTextFocus || terminalFocus"
       }
     ],

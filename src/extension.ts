@@ -6,10 +6,12 @@ import Player from "./utils/Player";
 let myStatusBarItem: vscode.StatusBarItem;
 const START_COMMAND = "hellomomo.start";
 const PLAY_COMMAND = "hellomomo.play";
+const ONLY_COMMAND = "hellomomo.only";
 const CHANG_LANGUAGE_COMMAND = "hellomomo.changelanguage";
 const CHANG_LANGUAGE_COMMAND2 = "hellomomo.changelanguage2";
 const PREV_WORD_COMMAND = "hellomomo.prevSentence";
 const NEXT_WORD_COMMAND = "hellomomo.nextSentence";
+const CHANGE_CHAPTER = "hellomomo.changeChapter";
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -21,34 +23,46 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.StatusBarAlignment.Left,
     -102
   );
-  const prevBtn = vscode.window.createStatusBarItem(
+  const OnlyBar = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
     -103
   );
-  const nextBtn = vscode.window.createStatusBarItem(
+  const prevBtn = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
     -104
   );
-  const PlayBar = vscode.window.createStatusBarItem(
+  const nextBtn = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
     -105
   );
-  const SentenceBar = vscode.window.createStatusBarItem(
+  const PlayBar = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left,
     -106
   );
+  const SentenceBar = vscode.window.createStatusBarItem(
+    vscode.StatusBarAlignment.Left,
+    -107
+  );
+
+  const mainColor = new vscode.ThemeColor("statusBarItem.myCustomColor"); // 使用主题颜色
 
   IdBar.text = "";
+  IdBar.command = CHANGE_CHAPTER;
+  IdBar.color = mainColor;
   prevBtn.text = "<";
   prevBtn.tooltip = "Previous Sentence";
   prevBtn.command = PREV_WORD_COMMAND;
+  prevBtn.color = mainColor;
   nextBtn.text = ">";
   nextBtn.tooltip = "Next Sentence";
-  nextBtn.command = NEXT_WORD_COMMAND;
+  prevBtn.command = NEXT_WORD_COMMAND;
+  prevBtn.color = mainColor;
   SentenceBar.command = CHANG_LANGUAGE_COMMAND;
   SentenceBar.command = CHANG_LANGUAGE_COMMAND2;
-  PlayBar.text = "▶";
+  SentenceBar.color = mainColor;
   PlayBar.command = PLAY_COMMAND;
+  PlayBar.color = mainColor;
+  OnlyBar.command = ONLY_COMMAND;
 
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
@@ -60,12 +74,14 @@ export function activate(context: vscode.ExtensionContext) {
         if (player.isStart) {
           initializeBar();
           IdBar.show();
+          OnlyBar.show();
           prevBtn.show();
           nextBtn.show();
           SentenceBar.show();
           PlayBar.show();
         } else {
           IdBar.hide();
+          OnlyBar.hide();
           prevBtn.hide();
           nextBtn.hide();
           SentenceBar.hide();
@@ -76,6 +92,10 @@ export function activate(context: vscode.ExtensionContext) {
         }
         // The code you place here will be executed every time your command is executed
         vscode.window.showInformationMessage(`Keep going!`);
+      }),
+      vscode.commands.registerCommand(CHANGE_CHAPTER, () => {
+        player.nextChapter();
+        initializeBar();
       }),
       vscode.commands.registerCommand(PREV_WORD_COMMAND, () => {
         player.prevWord();
@@ -96,15 +116,21 @@ export function activate(context: vscode.ExtensionContext) {
               count++;
             } else if (count == 1) {
               player.changelanguage();
-              player.nextWord();
+              if (!player.isOnly) {
+                player.nextWord();
+              }
               count = 0;
             }
             initializeBar();
-          }, 9000);
+          }, 20000);
         } else {
           player.timer !== null ? clearInterval(player.timer) : 0;
           initializeBar();
         }
+      }),
+      vscode.commands.registerCommand(ONLY_COMMAND, () => {
+        player.isOnly = !player.isOnly;
+        initializeBar();
       }),
       vscode.commands.registerCommand(CHANG_LANGUAGE_COMMAND, () => {
         player.changelanguage();
@@ -120,7 +146,8 @@ export function activate(context: vscode.ExtensionContext) {
   function setUpSentenceBar() {
     SentenceBar.text = player.getInitialWordBarContent();
     PlayBar.text = player.isPlaying ? "||" : "▶";
-    IdBar.text = `${player.getCurrentId()}`;
+    IdBar.text = `[${player.curChapter}-${player.currentId}]`;
+    OnlyBar.text = player.isOnly ? "(1)" : "(n)";
     // IdBar.text = `${((player.getCurrentId() / player.total()) * 100).toFixed(
     //   2
     // )}%`;

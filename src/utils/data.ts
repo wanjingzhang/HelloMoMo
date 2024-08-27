@@ -85,7 +85,6 @@ export const datasource =
 {"en":"随着越来越多的农村人口涌进城市,","zh":"With more and more rural residents flocking into cities,", },
 {"en":"到 2020 年,中国的城市化水平将从目前的 37%增长到 50%以上。","zh":"the urbanization level of China will increase from the current ratio of 37% to over 50% by the year 2020.", },
 {"en":"Unit 2- E-C: Sentence","zh":"", },
-
 {"en": "1.Water is great medicine, needed to maintain a healthy body, a clear mind,","zh": "水是很好的药物,一个健康的身体 、清醒的头脑", },
 {"en": "and a good balance within your tissues. There's more water in your body than anything else,","zh": "和人体组织内的平衡都离不开水 。人体内水分比其他任何成分都多,", },
 {"en": "with every cell containing mostly water. About 60% of your body is water.","zh": "每个细胞主要的成分就是水 。人体的 60%是水。", },
@@ -176,7 +175,6 @@ export const datasource =
 {"en": "第三,你们在情感上应该保持轻松 、稳定和愉快 。","zh": "Third, you should be emotionally stable, relaxed and delighted.", },
 {"en": "第四,你们必须遵守法律,遵守公认的道德规范。","zh": "Fourth, you should obey the laws and observe the established codes of ethics.", },
 {"en": "第五,你们要言行一致,意志坚强,并公正、客观地评价自己和他人。","zh": "Fifth, you should keep your words consistent with your action, remain strong-willed and evaluate yourselves and others in a just and objective way.", },
-
 {"en": "Unit 3- E-C: Sentence","zh": "", },
 {"en": "1.The TV dinner was a frozen meal on a metal tray that people could heat in the micro oven","zh": "都市晚餐是装在金属盘里的冷冻食物,人们可以把它放进微波炉加热", },
 {"en": "and eat while they watched TV.","zh": "然后边看电视边 吃 。", },
@@ -281,7 +279,6 @@ export const datasource =
 {"en": "缺乏彼此的理解和信任,只能导致夫妻俩最终离婚 。","zh": "Lack of mutual understanding and trust will finally lead couples to divorce.", },
 {"en": "牢固的婚姻能够让已婚的夫妻承受生活的种种巨变 。","zh": "A strong bond will allow a married couple to endure dramatic changes in their lives.", },
 {"en": "即使在最困难的情况下,爱情总能让人找到解决问题的办法。","zh": "In the most difficult circumstance, love will always help them find a way out.", },
-
 {"en": "Unit 4- E-C: Sentence","zh": "", },
 {"en": "1.After my flight arrived sometime past midnight on Thursday morning, I was in no mood to figure out a strange public transit system, ","zh": "我的航班在星期四凌晨到达后,我没心情去搞懂陌生的公交系统,", },
 {"en": "so I shelled out for a taxi to the hotel. On the way there, the worst car accident I've ever seen happened right in front of us.","zh": "于是我花钱雇了出租车前往旅馆 。在路上在我们的正前方我目睹了我所见过的最严重的车祸。", },
@@ -381,7 +378,6 @@ export const datasource =
 {"en": "3.医生发现业余爱好能帮助病人从他们的生理或精神疾病中恢复。","zh": "Doctors have found that hobbies can help patients recover from physical or mental illness.", },
 {"en": "兴趣爱好使一些卧床或坐轮椅的病人有事可做,使他们忘却自己的痛苦 。","zh": "Hobbies give bedridden or wheelchair patients something to do, keeping them from thinking about their pain. ", },
 {"en": "所以现在很多医院靠帮助病人培养兴趣爱好来治疗病人。","zh": "So nowadays many hospitals treat patients by helping them take up some hobbies.", },
-
 {"en": "Unit 5- E-C: Sentence","zh": "22.9%", },
 {"en": "1.A territory for an animal is a geographical area that an animal chooses to have dominance over.","zh": "动物的领地是动物选择的有统治权的地理区域。", },
 {"en": "Animals such as birds and mammals seem to exert control over their territory. ","zh": "像鸟类和哺乳动物似乎控制着它们的领地。", },
@@ -506,7 +502,6 @@ export const datasource =
 {"en": "造林绿化、保护环境作为重要栏目,加大宣传报道力度 .","zh": "coverage to afforestation, and environmental protection. ", },
 {"en": "中央政府的关心 、全国人民的支持, ","zh": "Concern from the Central Government and support from people throughout the country ", },
 {"en": "使西藏的生态建设和环境保护事业进入了新的阶段。","zh": "have enabled Tibet to embark upon a new phase in its ecological improvement and environmental protection undertakings.", },
-
 {"en": "Unit 6 E-C: Sentence","zh": "30.33%", },
 {"en": "1.The wedding lasts between 20 and 40 minutes. The wedding party enters","zh": "婚礼通常进行20 到 40 分钟。参加婚礼的客人伴着《婚礼进行曲》进人", },
 {"en": "the church while the Wedding March is played.","zh": "教堂。", },
@@ -629,7 +624,6 @@ export const datasource =
 {"en": "有助于形成自己的特性。","zh": "that helped to shape their characters. ", },
 {"en": "与另一种文化所形成的鲜明对照,","zh": "The striking contrasts of a second culture", },
 {"en": "为反映我们自己的文化提供了一面镜子。","zh": " provide a mirror in which one's own culture is reflected.", },
-
  {"en": "Unit 7 E-C: Sentence","zh": "37.82%", },
  {"en": "1.Father was in every way a ‘handyman’, and soon got together materials for his first caravan. ","zh": "父亲是个全能的巧手，很快就收集到了做第一辆篷车的材料。", },
  {"en": "This caravan had its roof and sides made of thin sheets of iron, and was far from comfortable. ","zh": "这辆篷车的车顶和两边是用薄铁皮做的,很不舒适 。", },
@@ -740,7 +734,6 @@ export const datasource =
  {"en": "另一方面，倘若书写没有被发明出来，人的记忆力将会比现代社会的人要强得多。","zh": "On the other hand, if writing had not been invented, people's memories would be much better than they are in modern society. ", },
  {"en": "在世界上一些尚未受到现代文明影响的地方,","zh": "In some parts of the world which are unaffected by modern civilization, ", },
  {"en": "我们能发现一些文盲,他们竟能准确无误地背出长诗。","zh": "we can find illiterate men who can recite long poems faultlessly.", },
-
 {"en": "Unit 8 E-C: Sentence","zh": "44.47%", },
 {"en": "1.Globally, 140 million people are suffering from alcohol drinking. ","zh": "全世界有一亿四千万人正在遭受嗜酒的折磨/蒙受酒精之害 。", },
 {"en": "Drinking alcohol takes a heavy toll on people's lives with countless traffic accidents. ","zh": "随着无数的交通事故,嗜酒夺取了大量的生命 .", },
@@ -849,7 +842,6 @@ export const datasource =
 {"en": "在百万富翁和他的工人之间会因这种和那种矛盾而引起争执 .","zh": "There may be disputes between the millionaire and his workers over one trouble or another. ", },
 {"en": "因此,一个非常富有的人,尽管拥有巨大的财富,却不一定能过上安逸的生活 。","zh": "A very rich man, therefore, in spite of his great wealth, may not have an easy life. ", },
 {"en": "他的烦恼可能比一个穷人的烦恼更大。","zh": "His worries may be greater than the worries of a poor man.", },
- 
 {"en": "Unit 9 E-C: Sentence","zh": "", },
 {"en": "1.In the name of all the judges and officials. I promise that we shall officiate ","zh": "我代表全体裁判员和工作人员宣，我们保证将以", },
 {"en": "in these Olympic Games with complete impartiality, ","zh": "真正的体育道德精神,", },
@@ -973,7 +965,6 @@ export const datasource =
 {"en": "这里不会有标好的路线或小道，你和你的同伴会得到地图,","zh": " There are no marked routes or trails.You and your party are given maps ", },
 {"en": "而且由你们来决定走哪条路线以及每天走多远。","zh": "and it's up to you which route to take and how far to travel each day. ", },
 {"en": "那里也不会有住的地方，所以你们要带顶帐篷。","zh": "There is also no accommodation so you will have to bring a tent.", },
-
 {"en": "Unit 10 E-C: Sentence","zh": "", },
 {"en": "1.The term Ivy League refers to the eight older and more famous eastern U.S. ","zh": "“常春藤盟校”(名牌大学)指的是美国东部8所著名的历史悠久的", },
 {"en": "colleges and universities. The buildings on the campus of these schools ","zh": "大学 。这些大学校园里的建筑物上", },
@@ -1094,7 +1085,6 @@ export const datasource =
 {"en": " 以及孩子、青年人或成年人等教学对象。","zh": "and the children, young people, or adults to whom they are to be taught. ", },
 {"en": "教育是对一个人全面的教育，这必须","zh": "Education is education of the whole person, and it is best acquired through ", },
 {"en": "通过教师和学生之间全面和积极的合作才能完美 地获得。","zh": "full and active cooperation between the teacher and the learner.", },
-
 {"en": "Unit 11 E-C: Sentence","zh": "", },
 {"en": "1.To help private farmers make the transition to the entertainment business, ","zh": "为了帮助私人农场主实现向娱乐行业的转变,", },
 {"en": "several states have established agritourism offices. This year Pennsylvania ","zh": "有几个州成立了农业旅游办公室.今年宾夕法尼亚州", },
@@ -1208,7 +1198,6 @@ export const datasource =
 {"en": "还有一个是幻想世界,把游客引入梦幻世界中去;","zh": "Still another,Fantasyland, takes the visitors in the dreamlike world. ", },
 {"en": "最后还有一个是边境世界,展示了过去西部地区的风貌 。","zh": "Finally, there is Frontierland, ", },
 {"en": "这是一个不同年龄的游客都喜欢的乐园。","zh": "which presents the old west. There is something for every age-group.", },
-
 {"en": "Unit 12 E-C: Sentence","zh":"", },
 {"en": "1.A year ago, the new Sadler's Wells Theatre was working into its first season,","zh": "一年前,粉饰一新的萨德勒兹韦尔斯剧院开始迎来它的第一个演出旺季。", },
 {"en": "giving London a fine stage for dance and a showcase for companies from home and abroad.","zh": "它为伦敦提供了一流的舞蹈艺术的舞台,也为国内外剧团提供了演出场所 。", },
@@ -1323,7 +1312,6 @@ export const datasource =
 {"en": "即便如此,这类节目收视率仍大获成功。","zh": "Nevertheless, it has been a massive success with audiences. ", },
 {"en": "在参赛者中,有一些人已经开始走上自己的电视生涯,","zh": "Some of the participants have gone on to launch TV careers of their own. ", },
 {"en": "其他人则重又销声匿迹。","zh": "Others have vanished back into anonymity.", },
-
 {"en": "Unit 13 E-C: Sentence","zh":"", },
 {"en": "1.In closing, I wish you an enjoyable, exciting and educational conference.","zh": "最后，我祝愿大家开一个愉快的、令人振奋的、有教育意义的会议。", },
 {"en": "I hope you leave here with good memories, good friends and good intentions for the future. Thank you.","zh": "希望你们离开这里 时带着难忘的回忆 、好朋友和对未来美好的期待 。谢谢大家。", },
@@ -1430,7 +1418,6 @@ export const datasource =
 {"en": "那就是通过协商而不是对抗 。","zh": "which is through consultation and not confrontation. ", },
 {"en": "中国商务部长指出，新达成的协议不仅","zh": "The Chinese Minister of Commerce said the new deal not only ", },
 {"en": "符合中国企业的利益，也保护了欧洲进口商和零售商的利益。","zh": "protected the interests of Chinese companies but also European Importers and retailers.", },
-
 {"en": "Unit 14 E-C: Sentence","zh":"", },
 {"en": "1.Handing out millions of dollars in extra compensation is expensive but the alternative","zh": "分发数百万美元作为职工的额外报酬可谓代价不菲,然而如果不这样做", },
 {"en": "can be even more costly. These days, companies that","zh": "代价会更昂贵.当今时代,", },
@@ -1549,8 +1536,6 @@ export const datasource =
 {"en": "盗版给社会带来了巨大的危害。要解决这个问题，必须制定更加严厉的法律,","zh": "Piracy has caused great harm to the society. To solve the problem, a more strict law should be ", },
 {"en": "那些制造和销售盗版软件的人必须被严惩 。","zh": "worked out and those who produce and sell pirated software should be severely punished. ", },
 {"en": "最重要的是,消费者必须培养抵制盗版软件的意识。","zh": "Most important of all, consumers must develop the consciousness to resist the pirated software.", },
-
-
 {"en": "Unit 15 E-C: Sentence","zh":"", },
 {"en": "1.After a long period of negotiations, our Singapore Shipping Corporation has signed","zh": "经过长时间的商谈，我们新加坡海运公司与中国同伴签订了", },
 {"en": "a long-term agreement with our Chinese partner. The deal is good news for all.","zh": "一项长期合约。这一合约可 以说是皆大欢喜。", },
@@ -1668,5 +1653,4 @@ export const datasource =
 {"en": "抓住机遇，到中国开拓市场。","zh": "to seize these opportunities and expand their presence in the Chinese market. ", },
 {"en": "我们欢 迎更多的大企业与中国企业合作,","zh": "We want to see more large firms working together with Chinese enterprises, ", },
 {"en": "也希望中小企业积极跟进。","zh": "and we hope the small and medium-sized firms can also join in.", },
-
 ]
