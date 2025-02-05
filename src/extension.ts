@@ -55,8 +55,8 @@ export function activate(context: vscode.ExtensionContext) {
   prevBtn.color = mainColor;
   nextBtn.text = ">";
   nextBtn.tooltip = "Next Sentence";
-  prevBtn.command = NEXT_WORD_COMMAND;
-  prevBtn.color = mainColor;
+  nextBtn.command = NEXT_WORD_COMMAND;
+  nextBtn.color = mainColor;
   SentenceBar.command = CHANG_LANGUAGE_COMMAND;
   SentenceBar.command = CHANG_LANGUAGE_COMMAND2;
   SentenceBar.color = mainColor;
@@ -122,7 +122,7 @@ export function activate(context: vscode.ExtensionContext) {
               count = 0;
             }
             initializeBar();
-          }, 20000);
+          }, 5000);
         } else {
           player.timer !== null ? clearInterval(player.timer) : 0;
           initializeBar();
